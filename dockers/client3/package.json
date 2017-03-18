@@ -1,0 +1,17 @@
+{
+  "name": "seneca-getuserservice",
+  "version": "1.0.0",
+  "description": "playing with senca microservices",
+  "main": "client3-mesh.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node client3-mesh.js"
+  },
+  "author": "will streeter",
+  "license": "ISC",
+  "dependencies": {
+    "seneca": "^3.3.0",
+    "seneca-balance-client": "^0.6.0",
+    "seneca-mesh": "^0.9.0"
+  }
+}

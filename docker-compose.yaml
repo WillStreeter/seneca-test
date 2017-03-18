@@ -1,0 +1,46 @@
+version: '2'
+
+services:
+
+  seneca-base:
+    restart: always
+    container_name: seneca-base
+    image: seneca:mesh
+    command: ['npm', 'run',  'start']
+    build:
+      context: .
+      dockerfile: ./dockers/base/Dockerfile
+    volumes:
+      - ./dockers/base/index-justbase-mesh.js:/seneca-micros/base-mesh/index-justbase-mesh.js:rw
+      - ./dockers/base/package.json:/seneca-micros/base-mesh/package.json:rw
+    ports:
+      - '39000:39001'
+
+# seneca-checkuserservice:
+#    restart: always
+#    container_name: seneca-checkuserservice
+#    image: users:check
+#    command: ['npm', 'run', 'start']
+#    build:
+#      context: .
+#      dockerfile: ./dockers/client2/Dockerfile
+#    volumes:
+#      - ./dockers/client2/client2-mesh.js:/seneca-micros/checkuserservice/client2-mesh.js:rw
+#      - ./dockers/client2/package.json:/seneca-micros/checkuserservice/package.json:rw
+#    ports:
+#      - '5000:5000'
+
+#  seneca-getuserservice:
+#    restart: always
+#    container_name: seneca-getuserservice
+#    image: users:get
+#    command: ['npm',  'run', 'start']
+#    build:
+#      context: .
+#      dockerfile: ./dockers/client3/Dockerfile
+#    volumes:
+#      - ./dockers/client3/client3-mesh.js:/seneca-micros/getuserservice/client3-mesh.js:rw
+#      - ./dockers/client3/package.json:/seneca-micros/getuserservice/package.json:rw
+#      - ./dockers/client3/MOCK_DATA.json:/seneca-micros/getuserservice/MOCK_DATA.json:rw
+#    ports:
+#      - '6000:6000'

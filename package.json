@@ -1,0 +1,28 @@
+{
+  "name": "seneca-test",
+  "version": "1.0.0",
+  "description": "playing with senca microservices",
+  "main": "baseNclient/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startBase": "node baseNclient/index.js",
+    "startClient": "node  baseNclient/client.js",
+    "startMesh": "node baseNclient/index-base-withservice-mesh.js",
+    "startJustMesh": "node  baseNclient/index-justbase-mesh.js",
+    "startMeshClient2": "node  baseNclient/client2-mesh.js",
+    "startMeshClient3": "node  baseNclient/client3-mesh.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillStreeter/seneca-test.git"
+  },
+  "author": "will streeter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillStreeter/seneca-test/issues"
+  },
+  "homepage": "https://github.com/WillStreeter/seneca-test#readme",
+  "dependencies": {
+    "seneca": "^3.3.0"
+  }
+}
